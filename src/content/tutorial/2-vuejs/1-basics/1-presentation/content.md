@@ -101,6 +101,4 @@ Cette introduction a pour but de vous familiariser avec les concepts de base de 
 
 **Prochaine étape :** Dans le prochain module, nous aborderons la structure d'un projet Vue.js et l'initialisation d'une application avec Vue CLI. Vous découvrirez également comment créer et organiser des composants en utilisant Class-Components.
 
----
-
-**Exercice :** Explorez le playground avec un exemple de composant de base et modifiez les données pour observer la réactivité de Vue.js en action. Essayez de créer un petit composant qui affiche un message et un compteur qui s'incrémente lorsqu'on clique sur un bouton.
+> **Exercice :** Explorez le playground avec un exemple de composant de base et modifiez les données pour observer la réactivité de Vue.js en action. Essayez de créer un petit composant qui affiche un message et un compteur qui s'incrémente lorsqu'on clique sur un bouton.

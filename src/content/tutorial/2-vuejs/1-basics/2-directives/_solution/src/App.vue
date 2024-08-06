@@ -1,15 +1,8 @@
 <template>
     <div>
-        <input 
-            type="number" 
-            v-model.number="limit" 
-            placeholder="Entrez une limite"
-        />
+        <input type="number" v-model.number="limit" placeholder="Entrez une limite" />
         <ul>
-            <li 
-                v-for="i in limit" 
-                :key="i"
-            >
+            <li v-for="i in limit" :key="i">
                 {{ fizzBuzzValue(i) }}
             </li>
         </ul>
@@ -36,3 +29,12 @@ export default class App extends Vue {
     }
 }
 </script>
+
+<style scoped>
+input {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>

@@ -87,10 +87,5 @@ Les directives dans Vue.js sont des attributs spéciaux que vous ajoutez à vos 
 
 Les directives sont un outil puissant dans Vue.js pour manipuler dynamiquement le DOM et créer des interfaces utilisateur réactives. Elles permettent de lier les données aux éléments HTML et de contrôler leur rendu en fonction des états de votre application.
 
----
+> **Exercice :** Dans le playground, créez un champs texte lié à une variable `limit` qui correspond au nombre d'itération d'une boucle `v-for`. Affichez une liste de nombres de 1 à `limit` en utilisant `v-for`. Si le nombre est divisible par 3, affichez "Fizz", si le nombre est divisible par 5, affichez "Buzz", et si le nombre est divisible par 3 et 5, affichez "FizzBuzz".
 
-**Exercice :** Dans le playground, créez un champs texte lié à une variable `limit` qui correspond au nombre d'itération d'une boucle `v-for`. Affichez une liste de nombres de 1 à `limit` en utilisant `v-for`. Si le nombre est divisible par 3, affichez "Fizz", si le nombre est divisible par 5, affichez "Buzz", et si le nombre est divisible par 3 et 5, affichez "FizzBuzz".
-
----
-
-**Prochaine étape :** Dans la prochaine leçon, nous approfondirons l'utilisation des composants et explorerons la gestion des propriétés (Props) et des événements pour permettre une communication efficace entre les composants.
