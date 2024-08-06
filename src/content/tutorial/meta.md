@@ -1,6 +1,6 @@
 ---
 type: tutorial
-mainCommand: ['npm run dev', 'Starting http server']
+mainCommand: ['yarn dev', 'Starting http server']
 prepareCommands:
-  - ['npm install', 'Installing dependencies']
+  - ['yarn', 'Installing dependencies']
 ---

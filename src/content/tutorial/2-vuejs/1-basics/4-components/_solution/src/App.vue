@@ -1,11 +1,20 @@
 <template>
-    <div style="display: flex; width: 100%;">
-        <Counter 
-            v-for="(counter, index) in counters" 
-            :key="index" 
-            @count="counter.count = $event" 
-            :name="counter.name"
-        ></Counter>
+    <div>
+        <div style="display: flex; width: 100%;">
+            <div
+                v-for="(counter, index) in counters" 
+                :key="index" 
+            >
+                <input 
+                    v-model="counter.name" 
+                    placeholder="Entrez un nom"
+                />
+                <Counter 
+                    @count="counter.count = $event" 
+                    :name="counter.name"
+                ></Counter>
+            </div>
+        </div>
         <div>
             SUM: {{ counters.reduce((acc, counter) => acc + counter.count, 0) }}
         </div>
@@ -34,3 +43,11 @@ export default class App extends Vue {
     ];
 }
 </script>
+<style scoped>
+input {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>
