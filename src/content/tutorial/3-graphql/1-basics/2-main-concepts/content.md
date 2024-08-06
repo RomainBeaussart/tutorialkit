@@ -2,6 +2,7 @@
 type: lesson
 title: Les Concepts Clés de GraphQL
 editor: true
+focus: /schema.graphql
 terminal: false
 previews: false
 ---
