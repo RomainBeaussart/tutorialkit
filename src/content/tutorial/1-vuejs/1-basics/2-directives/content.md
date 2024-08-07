@@ -10,7 +10,6 @@ editor: { fileTree: false }
 #### **Objectifs de l'Étape :**
 - Comprendre le rôle des directives dans Vue.js.
 - Apprendre à utiliser les directives de base comme `v-bind`, `v-if`, `v-for`, `v-model`, et `v-show`.
-- Savoir créer des directives personnalisées pour des besoins spécifiques.
 
 ---
 

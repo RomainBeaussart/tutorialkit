@@ -100,6 +100,7 @@ export default class CounterComponent extends Vue {
 Les props dans Class-Components sont définies à l'aide du décorateur `@Prop`.
 
 **Exemple :**
+Composant enfant :
 ```vue
 <template>
   <div>
@@ -119,8 +120,31 @@ export default class MessageComponent extends Vue {
 </script>
 ```
 
+Component parent :
+```vue
+<template>
+  <div>
+    <MessageComponent title="Titre du Message" message="Contenu du Message" />
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import MessageComponent from './MessageComponent.vue';
+
+@Component({
+  components: {
+    MessageComponent,
+  },
+})
+export default class ParentComponent extends Vue {
+}
+</script>
+```
+
 **Explication :**
-- **`@Prop`** : Décorateur utilisé pour définir une prop. La première valeur est le type attendu, et la seconde permet de définir une valeur par défaut ou d'autres options.
+- **`@Prop`** : Dans le composant enfant, le décorateur utilisé pour définir une prop. La première valeur est le type attendu, et la seconde permet de définir une valeur par défaut ou d'autres options.
+- **`:title`** et **`:message`** : Dans le composant parent, les props sont passées au composant enfant en utilisant la syntaxe `:nomProp="valeur"`.
 
 ##### **d) Utilisation des Emits**
 
