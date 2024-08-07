@@ -96,9 +96,8 @@ Vue.js se distingue par sa facilité d'apprentissage, son intégration progressi
 
 ---
 
-#### **4. Conclusion et Suite de la Formation**
+#### **4. Conclusion**
 Cette introduction a pour but de vous familiariser avec les concepts de base de Vue.js. Dans les prochains modules, vous apprendrez à créer des composants en utilisant l'approche Class-Components, à gérer les états, et à concevoir des interfaces utilisateur modernes avec Vuetify.
 
-**Prochaine étape :** Dans le prochain module, nous aborderons la structure d'un projet Vue.js et l'initialisation d'une application avec Vue CLI. Vous découvrirez également comment créer et organiser des composants en utilisant Class-Components.
 
 > **Exercice :** Explorez le playground avec un exemple de composant de base et modifiez les données pour observer la réactivité de Vue.js en action. Essayez de créer un petit composant qui affiche un message et un compteur qui s'incrémente lorsqu'on clique sur un bouton.
