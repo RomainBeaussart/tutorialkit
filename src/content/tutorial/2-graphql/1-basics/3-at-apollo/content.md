@@ -168,8 +168,53 @@ export default class ArticleDetails extends Vue {
   articleTitle!: string;
 
   // L'attribut 'articleContent' est mis à jour via 'specificResult' dans l'exemple ci-dessus
+
+  async updateArticle({ id, title, content }: { id: string, title: string, content: string }) {
+    // Code pour mettre à jour l'article
+
+    await this.$apollo.mutate({
+      mutation: gql`
+        mutation UpdateArticle($id: ID!, $title: String!, $content: String!) {
+          updateArticle(id: $id, title: $title, content: $content) {
+            id
+            title
+            content
+          }
+        }
+      `,
+      variables: { id, title, content }
+    });
+
+  }
 }
 </script>
+```
+
+Si on a besoin de modifier directement le resultat de la requête, il faut passer par un variable intermédiaire.
+
+```typescript
+@Apollo({
+  query: gql`
+    query GetLoading($id: ID!) {
+      loading(id: $id) {
+        currentStep
+        totalSteps
+      }
+    }
+  `,
+  variables() {
+    return { id: this.articleId };
+  },
+  specificResult({ data }: { data: any }) {
+    const tmp = { ...data.loading }
+
+    this.loading = {
+      currentStep: tmp.currentStep,
+      totalSteps: tmp.totalSteps,
+      progress: Math.round((tmp.currentStep / tmp.totalSteps) * 100)
+    }
+  }
+})
 ```
 
 **Explication :**
