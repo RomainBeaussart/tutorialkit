@@ -279,8 +279,7 @@ articleTitle!: string;
 Dans cet exemple, la requête `GetArticle` sera exécutée après un délai de 500ms après que `articleId` a été modifié.
 
 ---
-
-> **⚠️ Remarque** : Pour plus de lisibilité, nous avons écrit les requetes directement dans le code. Il est recommandé de les externaliser dans des fichiers *.gql* séparés pour une meilleure organisation.
+> **⚠️ Remarque** : Pour plus de lisibilité, nous avons écrit les requetes directement dans le code. Il est recommandé de les externaliser dans des fichiers *.gql* séparés, et de l'importer dans voter fichier `.vue` pour une meilleure organisation.
 ---
 
 #### **5. Conclusion et Exercices**
