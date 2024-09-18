@@ -221,6 +221,66 @@ Si on a besoin de modifier directement le resultat de la requête, il faut passe
 - **`variables`** : La fonction `variables` permet de définir dynamiquement les variables de la requête en fonction de l'état du composant. C'est a dire que la requête `GetArticle` sera réexécutée à chaque fois que `articleId` change.
 - **`specificResult`** : Permet un traitement plus granulaire des résultats de la requête. Ici, `specificResult` met à jour à la fois `articleTitle` et `articleContent`.
 
+
+#### **5. Skip et Bounce**
+
+Il est possible de sauter l'exécution de la requête en utilisant la propriété `skip` du décorateur `@Apollo`. Cette propriété prend une fonction qui retourne un booléen indiquant si la requête doit être exécutée ou non.
+
+```typescript
+@Apollo({
+  query: gql`
+    query GetArticle($id: ID!) {
+      article(id: $id) {
+        title
+        content
+      }
+    }
+  `,
+  variables() {
+    return { id: this.articleId };
+  },
+  specificResult({ data }: { data: any }) {
+    this.articleTitle = data.article.title;
+    this.articleContent = data.article.content;
+  },
+  skip() {
+    return !this.articleId;
+  }
+})
+articleTitle!: string;
+```
+
+Dans cet exemple, la requête `GetArticle` ne sera pas exécutée si `articleId` est vide ou nul.
+
+Il est également possible de définir un délai de rebond (bounce) pour l'exécution de la requête en utilisant la propriété `bounce` du décorateur `@Apollo`. Cette propriété prend un nombre en millisecondes qui définit le délai avant l'exécution de la requête après que l'attribut a été modifié.
+
+```typescript
+@Apollo({
+  query: gql`
+    query GetArticle($id: ID!) {
+      article(id: $id) {
+        title
+        content
+      }
+    }
+  `,
+  variables() {
+    return { id: this.articleId };
+  },
+  specificResult({ data }: { data: any }) {
+    this.articleTitle = data.article.title;
+    this.articleContent = data.article.content;
+  },
+  bounce: 500 // Délai de 500ms avant l'exécution de la requête
+})
+articleTitle!: string;
+```
+
+Dans cet exemple, la requête `GetArticle` sera exécutée après un délai de 500ms après que `articleId` a été modifié.
+
+---
+
+> **⚠️ Remarque** : Pour plus de lisibilité, nous avons écrit les requetes directement dans le code. Il est recommandé de les externaliser dans des fichiers *.gql* séparés pour une meilleure organisation.
 ---
 
 #### **5. Conclusion et Exercices**
