@@ -130,3 +130,5 @@ Lorsque vous définissez un objet ou appelez une fonction, VSCode vous proposera
 #### **7. Conclusion**
 
 TypeScript est un outil puissant qui améliore la qualité du code JavaScript en ajoutant la vérification des types, ce qui permet de détecter les erreurs avant l'exécution. Combiné à l'auto-complétion dans VSCode, il augmente considérablement la productivité des développeurs en leur fournissant des suggestions intelligentes basées sur les types.
+
+> Si vous voulez en savoir plus sur TypeScript, rendez-vous sur la [documentation officielle de TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) ou consultez [cet article sur les bases de TypeScript](https://medium.com/@shishirsingh66g/understanding-typescript-interface-custom-type-class-enumeration-and-promise-b18fc5f807e9).
