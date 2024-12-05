@@ -5,12 +5,12 @@ focus: /src/App.vue
 editor: { fileTree: false }
 ---
 
-### Introduction à Vue.js 2
+### Introduction à Vue.js 3
 
 #### **Objectifs de l'Étape :**
-- Comprendre les concepts fondamentaux de Vue.js 2.
+- Comprendre les concepts fondamentaux de Vue.js 3.
 - Saisir l'intérêt de l'utilisation de Vue.js dans le développement d'applications web.
-- Découvrir les composants, l'état, et la réactivité dans Vue.js 2.
+- Découvrir les composants, l'état, et la réactivité dans Vue.js 3.
 
 ---
 
@@ -24,7 +24,7 @@ Vue.js est un framework JavaScript progressif utilisé pour construire des inter
 
 ---
 
-#### **2. Concepts Clés de Vue.js 2**
+#### **2. Concepts Clés de Vue.js 3**
 
 ##### **a) Les Composants**
 Un composant est une unité réutilisable dans Vue.js qui combine le code HTML, le style CSS et la logique JavaScript. Les composants peuvent être imbriqués les uns dans les autres, créant ainsi des interfaces utilisateur complexes à partir d'éléments simples et isolés.
@@ -38,9 +38,9 @@ Un composant est une unité réutilisable dans Vue.js qui combine le code HTML, 
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class App extends Vue {
     message = "Bienvenue dans Vue.js !";
 }
@@ -70,9 +70,9 @@ Vue.js utilise un système de réactivité qui observe les changements dans les 
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class App extends Vue {
     compteur = 0;
     incrementer() {

@@ -6,10 +6,10 @@ terminal: false
 previews: false
 ---
 
-### Traduction d’un Composant Vue.js 2 Classique vers Vue.js Class-Component
+### Traduction d’un Composant Vue.js 3 Classique vers Vue.js Class-Component
 
 #### **Objectifs de l’Étape :**
-- Comprendre comment convertir un composant Vue.js 2 classique vers une approche Class-Component.
+- Comprendre comment convertir un composant Vue.js 3 classique vers une approche Class-Component.
 - Apprendre à gérer les données, les méthodes, les props, les computed properties, et les hooks du cycle de vie avec Class-Component.
 
 ---
@@ -65,9 +65,9 @@ Voyons maintenant comment traduire ce composant vers une syntaxe Class-Component
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class CounterComponent extends Vue {
   // Propriétés réactives
   title: string = 'Bienvenue';
@@ -141,9 +141,9 @@ export default {
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
+import { Options, Vue, Prop } from 'vue-class-component';
 
-@Component
+@Options({})
 export default class CounterComponent extends Vue {
   // Prop
   @Prop({ default: 0 }) initialCount!: number;
@@ -210,9 +210,9 @@ export default {
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+@Options({})
 export default class CounterComponent extends Vue {
   count: number = 0;
 
@@ -278,9 +278,9 @@ export default {
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from 'vue-class-component';
 
-@Component
+@Options({})
 export default class CounterComponent extends Vue {
   count: number = 0;
 

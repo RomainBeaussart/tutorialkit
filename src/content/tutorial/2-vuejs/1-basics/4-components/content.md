@@ -8,7 +8,7 @@ editor: true
 ### Création de Composants avec Class-Components
 
 #### **Objectifs de l'Étape :**
-- Apprendre à créer des composants Vue.js 2 en utilisant l'approche Class-Components.
+- Apprendre à créer des composants Vue.js 3 en utilisant l'approche Class-Components.
 - Comprendre le cycle de vie des composants Vue.
 - Savoir définir et utiliser les attributs, les propriétés, et les méthodes dans un composant Vue.js.
 
@@ -16,7 +16,7 @@ editor: true
 
 #### **1. Qu'est-ce que l'Approche Class-Components ?**
 
-L'approche Class-Components dans Vue.js 2 permet de définir des composants en utilisant la syntaxe de classes JavaScript moderne, en s'appuyant sur les décorateurs. Cette approche est similaire à celle de frameworks comme Angular ou React avec TypeScript, offrant une structure plus organisée et lisible pour les développeurs qui préfèrent la programmation orientée objet.
+L'approche Class-Components dans Vue.js 3 permet de définir des composants en utilisant la syntaxe de classes JavaScript moderne, en s'appuyant sur les décorateurs. Cette approche est similaire à celle de frameworks comme Angular ou React avec TypeScript, offrant une structure plus organisée et lisible pour les développeurs qui préfèrent la programmation orientée objet.
 
 **Avantages :**
 - Meilleure lisibilité du code pour les développeurs habitués à la programmation orientée objet.
@@ -129,10 +129,10 @@ Component parent :
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 import MessageComponent from './MessageComponent.vue';
 
-@Component({
+@Options({
   components: {
     MessageComponent,
   },
@@ -161,9 +161,9 @@ Composant enfant :
 </template>
 
 <script lang="ts">
-import { Component, Vue, Emit } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class EventComponent extends Vue {
   @Emit() customEvent() {
     return 'Données à envoyer';
@@ -184,9 +184,9 @@ Component parent :
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class ParentComponent extends Vue {
   handleEvent(data: string) {
     console.log('Données reçues :', data);
@@ -229,6 +229,6 @@ export default class LifecycleComponent extends Vue {
 
 #### **4. Conclusion et Exercices**
 
-L'approche Class-Components apporte une structure plus organisée et lisible pour créer des composants dans Vue.js 2, en particulier pour les développeurs familiers avec les classes en JavaScript. Les props, les méthodes, et le cycle de vie sont gérés de manière intuitive en utilisant des décorateurs et des méthodes standard.
+L'approche Class-Components apporte une structure plus organisée et lisible pour créer des composants dans Vue.js 3, en particulier pour les développeurs familiers avec les classes en JavaScript. Les props, les méthodes, et le cycle de vie sont gérés de manière intuitive en utilisant des décorateurs et des méthodes standard.
 
 > **Exercice :** Modifiez les composants `App.vue` et `Counter.vue` afin d'afficher la somme des deux compteurs dans le composant principal. Créer aussi deux `input` pour modifier les noms des compteurs.

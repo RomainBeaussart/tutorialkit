@@ -20,22 +20,22 @@
   </template>
   
   <script lang="ts">
-  import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
   
-  @Component
-  export default class VuetifyCardComponent extends Vue {
-    // Méthode pour l'action principale
-    primaryAction() {
-      alert('Action principale exécutée');
-    }
-  
-    // Méthode pour l'action secondaire
-    secondaryAction() {
-      alert('Action secondaire exécutée');
-    }
+@Options({})
+export default class VuetifyCardComponent extends Vue {
+  // Méthode pour l'action principale
+  primaryAction() {
+    alert('Action principale exécutée');
   }
-  </script>
-  
-  <style scoped>
-  /* Ajoutez des styles personnalisés ici si nécessaire */
-  </style>
+
+  // Méthode pour l'action secondaire
+  secondaryAction() {
+    alert('Action secondaire exécutée');
+  }
+}
+</script>
+
+<style scoped>
+/* Ajoutez des styles personnalisés ici si nécessaire */
+</style>

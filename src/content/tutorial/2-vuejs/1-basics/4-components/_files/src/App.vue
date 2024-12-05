@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Options, Vue } from "vue-class-component";
 import Counter from "./components/Counter.vue";
 
-@Component({
+@Options({
     components: {
         Counter: Counter
     }

@@ -16,7 +16,7 @@ editor: true
 
 Vuetify est une bibliothèque de composants UI basée sur les directives de Material Design de Google. Il fournit une large gamme de composants prêts à l'emploi qui permettent de créer rapidement des interfaces utilisateur modernes, réactives et esthétiques. Vuetify est très bien intégré avec Vue.js et peut être utilisé facilement avec l'approche Class-Components.
 
->Il est vivement conseillé de lire la [documentation officielle de Vuetify](https://v2.vuetifyjs.com/en/getting-started/installation/) pour en savoir plus sur les composants disponibles et les fonctionnalités offertes.
+>Il est vivement conseillé de lire la [documentation officielle de Vuetify](https://vuetifyjs.com/en/getting-started/installation/) pour en savoir plus sur les composants disponibles et les fonctionnalités offertes.
 
 ---
 
@@ -49,9 +49,9 @@ Avec Vuetify installé, vous pouvez commencer à créer des composants en utilis
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class VuetifyCardComponent extends Vue {
   // Méthode pour l'action principale
   primaryAction() {

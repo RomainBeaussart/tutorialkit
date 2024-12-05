@@ -127,9 +127,9 @@ Il est important de distinguer les computed properties des méthodes dans Vue.js
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Options, Vue } from "vue-class-component";
 
-@Component
+@Options({})
 export default class UserProfile extends Vue {
   firstName: string = 'John';
   lastName: string = 'Doe';
